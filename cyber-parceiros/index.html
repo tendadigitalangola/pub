@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Cyber Parceiros — torne-se parceiro do Cyber Agrafos, indique clientes e receba comissão por vendas válidas.">
+  <title>Cyber Parceiros | Cyber Agrafos</title>
+  <style>
+    :root{
+      --red:#ff0000;--ink:#151515;--muted:#686868;--line:#e9e9e9;--soft:#f7f7f7;--white:#fff;
+      --shadow:0 22px 55px rgba(0,0,0,.07);--radius:24px;--max:1180px
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--white);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:-.02em}.mark{width:12px;height:12px;border-radius:3px;background:var(--red)}
+    .navlinks{display:flex;align-items:center;gap:24px;font-size:.91rem;color:#505050}.navlinks a{text-decoration:none}.navlinks a:hover{color:#111}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:14px 18px;font-weight:800;text-decoration:none;border:1px solid transparent;transition:.18s ease}.btn:hover{transform:translateY(-1px)}.btn-red{background:var(--red);color:white;box-shadow:0 10px 24px rgba(255,0,0,.17)}.btn-ghost{border-color:#dedede;background:#fff}
+    .hero{padding:92px 0 72px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:64px}.kicker{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#4c4c4c;margin-bottom:20px}.kicker:before{content:"";width:22px;height:3px;border-radius:4px;background:var(--red)}
+    h1{font-size:clamp(3.4rem,8vw,6.8rem);line-height:.88;letter-spacing:-.068em;margin:0 0 26px;max-width:820px}.red{color:var(--red)}.lead{max-width:700px;color:var(--muted);font-size:clamp(1.08rem,2vw,1.3rem);line-height:1.7;margin:0 0 30px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.micro{margin-top:18px;font-size:.87rem;color:#777}
+    .hero-card{border:1px solid var(--line);border-radius:30px;padding:34px;background:linear-gradient(145deg,#fff,#fafafa);box-shadow:var(--shadow);position:relative}.hero-card:before{content:"";position:absolute;right:28px;top:26px;width:10px;height:10px;background:var(--red);border-radius:50%}.hero-card .label{font-size:.74rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase;color:#777}.hero-card h2{font-size:2rem;line-height:1.07;letter-spacing:-.04em;margin:10px 0 8px}.hero-card p{color:#666;line-height:1.6;margin:0 0 26px}.statrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:18px;border-radius:16px;background:#fff;border:1px solid var(--line)}.stat strong{display:block;font-size:1.6rem;letter-spacing:-.04em}.stat span{font-size:.82rem;color:#777}
+    section{padding:86px 0}.soft{background:var(--soft)}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:38px}.section-head>div{max-width:690px}.eyebrow{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:900;color:var(--red);margin-bottom:11px}.section-head h2{font-size:clamp(2.25rem,5vw,3.7rem);letter-spacing:-.052em;line-height:1;margin:0}.section-head p{margin:14px 0 0;color:var(--muted);line-height:1.65}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:var(--radius);padding:27px;background:#fff}.num{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#fff0f0;color:var(--red);font-weight:900;margin-bottom:30px}.card h3{font-size:1.12rem;margin:0 0 9px;letter-spacing:-.02em}.card p{margin:0;color:var(--muted);line-height:1.58;font-size:.95rem}.icon{width:42px;height:42px;border-radius:12px;background:#f1f1f1;display:grid;place-items:center;font-weight:900;margin-bottom:24px}
+    .benefit{min-height:208px}.benefit strong.big{display:block;font-size:2rem;letter-spacing:-.04em;margin-bottom:8px}.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.level{border:1px solid var(--line);border-radius:26px;padding:30px;background:#fff;position:relative;overflow:hidden}.level:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:#e5e5e5}.level.featured{border-color:#ffcaca;box-shadow:0 18px 44px rgba(255,0,0,.07)}.level.featured:after{background:var(--red)}.level small{font-weight:850;color:#777;text-transform:uppercase;letter-spacing:.11em}.level .pct{font-size:4.4rem;line-height:1;letter-spacing:-.07em;font-weight:900;margin:22px 0 10px}.level .pct span{font-size:1.4rem;color:var(--red)}.level p{color:#666;line-height:1.55}.level .range{font-weight:800;color:#222}
+    .note{margin-top:22px;border-left:3px solid var(--red);padding:14px 18px;background:#fff;border-radius:0 12px 12px 0;color:#555;line-height:1.6}.services,.profiles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.list-card{display:flex;align-items:flex-start;gap:15px;border:1px solid var(--line);border-radius:18px;padding:20px;background:#fff}.tick{flex:0 0 30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#fff0f0;color:var(--red);font-weight:900}.list-card strong{display:block;margin-bottom:4px}.list-card span{color:#707070;line-height:1.5;font-size:.92rem}
+    .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.rule{padding:20px 22px;border-bottom:1px solid var(--line)}.rule b{display:block;margin-bottom:6px}.rule span{color:#666;line-height:1.55;font-size:.94rem}.faq{max-width:900px}.faq details{border-top:1px solid var(--line);padding:0}.faq details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:800;padding:22px 4px;list-style:none;position:relative;padding-right:34px}summary::-webkit-details-marker{display:none}summary:after{content:"+";position:absolute;right:6px;font-size:1.35rem;color:#777}details[open] summary:after{content:"−"}.faq p{margin:-6px 0 22px;padding-right:30px;color:#666;line-height:1.65}
+    .cta{padding:90px 0}.cta-box{border-radius:30px;padding:52px;background:#151515;color:white;display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center}.cta-box .eyebrow{color:#ff6161}.cta-box h2{font-size:clamp(2.3rem,5vw,4rem);line-height:1;letter-spacing:-.05em;margin:0 0 14px}.cta-box p{color:#bbb;margin:0;max-width:650px;line-height:1.65}.cta-box .btn{padding:16px 22px;white-space:nowrap}
+    footer{border-top:1px solid var(--line);padding:32px 0 42px;color:#777}.footer-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}.contacts{display:flex;gap:20px;flex-wrap:wrap}.contacts a{text-decoration:none;color:#333;font-weight:700}.legal{font-size:.84rem;margin-top:22px;color:#888}
+    @media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:38px}.hero-card{max-width:650px}.grid4{grid-template-columns:repeat(2,1fr)}.levels{grid-template-columns:1fr}.navlinks a:not(.btn){display:none}.cta-box{grid-template-columns:1fr}.section-head{display:block}.section-head>p{margin-top:16px}}
+    @media(max-width:680px){.wrap{width:min(100% - 28px,var(--max))}.hero{padding:64px 0 54px}h1{font-size:clamp(3rem,16vw,5.3rem)}section{padding:66px 0}.grid3,.grid4,.services,.profiles,.rules{grid-template-columns:1fr}.hero-card{padding:24px}.statrow{grid-template-columns:1fr 1fr}.cta-box{padding:32px 24px}.navin{min-height:64px}.nav .btn{padding:11px 13px;font-size:.85rem}}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Navegação principal">
+    <div class="wrap navin">
+      <a class="brand" href="#inicio"><span class="mark"></span>Cyber Parceiros</a>
+      <div class="navlinks">
+        <a href="#como-funciona">Como funciona</a><a href="#niveis">Níveis</a><a href="#faq">FAQ</a>
+        <a class="btn btn-red" href="https://wa.me/244925430609?text=Ol%C3%A1%2C%20quero%20candidatar-me%20ao%20Cyber%20Parceiros%20como%20parceiro%2Fagente%20de%20vendas." target="_blank" rel="noopener">Candidatar-me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="kicker">Cyber Agrafos apresenta</div>
+          <h1>PROCURANDO<br><span class="red">EMPREGO?</span></h1>
+          <p class="lead">Transforme a sua rede de contactos em oportunidade. Torne-se <strong>Cyber Parceiro</strong>, indique clientes para os serviços do Cyber Agrafos e receba comissão pelas vendas válidas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-red" href="https://wa.me/244925430609?text=Ol%C3%A1%2C%20quero%20candidatar-me%20ao%20Cyber%20Parceiros%20como%20parceiro%2Fagente%20de%20vendas." target="_blank" rel="noopener">Quero ser Cyber Parceiro</a>
+            <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+          </div>
+          <div class="micro">Candidatura nesta primeira versão feita diretamente pelo WhatsApp.</div>
+        </div>
+        <aside class="hero-card" aria-label="Resumo do programa">
+          <div class="label">Uma parceria simples</div>
+          <h2>O cliente poupa. Você ganha.</h2>
+          <p>O cliente indicado identifica o seu código pessoal. Recebe desconto e a venda passa a contar para a sua comissão.</p>
+          <div class="statrow">
+            <div class="stat"><strong>5%</strong><span>desconto do cliente</span></div>
+            <div class="stat"><strong>5–15%</strong><span>comissão do parceiro</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="soft" id="como-funciona">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Como funciona</div><h2>Venda por indicação, sem complicação.</h2><p>O programa liga parceiros com capacidade de recomendação a clientes que precisam dos serviços do Cyber Agrafos.</p></div></div>
+        <div class="grid3">
+          <article class="card"><div class="num">01</div><h3>Adira ao programa</h3><p>Candidate-se como parceiro/agente de vendas e receba o seu código pessoal de identificação.</p></article>
+          <article class="card"><div class="num">02</div><h3>Indique clientes</h3><p>Apresente os serviços do Cyber Agrafos. O cliente informa o seu código ao solicitar o atendimento.</p></article>
+          <article class="card"><div class="num">03</div><h3>Receba comissão</h3><p>A venda válida entra no apuramento. A sua taxa depende do nível mensal atingido.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Benefícios</div><h2>Valor para os dois lados.</h2></div></div>
+        <div class="grid4">
+          <article class="card benefit"><div class="icon">%</div><strong class="big">5%</strong><h3>Desconto para o cliente</h3><p>Clientes indicados por um Cyber Parceiro recebem 5% de desconto.</p></article>
+          <article class="card benefit"><div class="icon">Kz</div><h3>Comissão progressiva</h3><p>Quanto maior o volume mensal elegível, maior pode ser a sua percentagem de comissão.</p></article>
+          <article class="card benefit"><div class="icon">15</div><h3>Pagamentos definidos</h3><p>Os pagamentos são processados no dia 15 e no último dia de cada mês.</p></article>
+          <article class="card benefit"><div class="icon">↗</div><h3>Rede que gera rendimento</h3><p>Use os seus contactos em escolas, empresas, grupos e comunidades para gerar oportunidades reais.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="niveis">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Níveis de comissão</div><h2>O seu resultado define o seu nível.</h2><p>O nível aplicável é recalculado mensalmente com base no volume do mês anterior.</p></div></div>
+        <div class="levels">
+          <article class="level"><small>Nível 1</small><div class="pct">5<span>%</span></div><p class="range">Até 99.999 Kz/mês</p><p>Taxa base para parceiros com vendas mensais até este limite.</p></article>
+          <article class="level"><small>Nível 2</small><div class="pct">10<span>%</span></div><p class="range">100.000 a 299.999 Kz/mês</p><p>Maior retorno para parceiros que aumentam o volume de vendas elegíveis.</p></article>
+          <article class="level featured"><small>Nível 3</small><div class="pct">15<span>%</span></div><p class="range">300.000 Kz ou mais/mês</p><p>Taxa máxima do programa para parceiros de maior desempenho mensal.</p></article>
+        </div>
+        <div class="note"><strong>Importante:</strong> a comissão é calculada após o desconto concedido ao cliente e incide apenas sobre o valor comissionável da venda.</div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Serviços promovíveis</div><h2>O que você pode indicar.</h2><p>Alguns dos serviços do Cyber Agrafos que podem gerar oportunidades para parceiros.</p></div></div>
+        <div class="services">
+          <div class="list-card"><div class="tick">✓</div><div><strong>Impressões e materiais gráficos</strong><span>Necessidades pessoais, académicas, profissionais e institucionais.</span></div></div>
+          <div class="list-card"><div class="tick">✓</div><div><strong>Convites de casamento e eventos</strong><span>Materiais personalizados para cerimónias, celebrações e festas.</span></div></div>
+          <div class="list-card"><div class="tick">✓</div><div><strong>Estampagem de T-shirts e coletes</strong><span>Peças personalizadas para equipas, eventos, campanhas e organizações.</span></div></div>
+          <div class="list-card"><div class="tick">✓</div><div><strong>Materiais decorativos para festas</strong><span>Soluções gráficas e personalizadas para eventos e celebrações.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="perfis">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Perfis procurados</div><h2>Pessoas com ligação a comunidades.</h2><p>Valorizamos parceiros capazes de apresentar os serviços a públicos que já conhecem e confiam neles.</p></div></div>
+        <div class="profiles">
+          <div class="list-card"><div class="tick">01</div><div><strong>Estudantes e líderes estudantis</strong><span>Pessoas com acesso a turmas, associações e grupos académicos.</span></div></div>
+          <div class="list-card"><div class="tick">02</div><div><strong>Contactos em escolas e instituições</strong><span>Pessoas próximas de organizações que consomem impressão e personalização.</span></div></div>
+          <div class="list-card"><div class="tick">03</div><div><strong>Organizadores de festas e eventos</strong><span>Perfis ligados a casamentos, aniversários, cerimónias e decoração.</span></div></div>
+          <div class="list-card"><div class="tick">04</div><div><strong>Promotores e pessoas com redes activas</strong><span>Quem participa em comunidades, grupos profissionais, comerciais ou locais.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="regras">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Regras principais</div><h2>Transparência desde o início.</h2></div></div>
+        <div class="rules">
+          <div class="rule"><b>Desconto do cliente</b><span>O cliente indicado recebe 5% de desconto.</span></div>
+          <div class="rule"><b>Base da comissão</b><span>A comissão é calculada depois do desconto e apenas sobre o valor comissionável.</span></div>
+          <div class="rule"><b>Nível mensal</b><span>O nível é recalculado todos os meses com base no desempenho do mês anterior.</span></div>
+          <div class="rule"><b>Datas de pagamento</b><span>Pagamentos no dia 15 e no último dia do mês.</span></div>
+          <div class="rule"><b>Mínimo para pagamento</b><span>O mínimo é 3.000 Kz. Valores inferiores acumulam para o período seguinte.</span></div>
+          <div class="rule"><b>Estado do parceiro</b><span>O cadastro pode estar em estado <strong>Ativo</strong> ou <strong>Suspenso</strong>.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="faq">
+      <div class="wrap faq">
+        <div class="section-head"><div><div class="eyebrow">FAQ</div><h2>Perguntas frequentes.</h2></div></div>
+        <details><summary>Como faço a candidatura?</summary><p>Nesta primeira versão, a candidatura é feita via WhatsApp. Use o botão “Quero ser Cyber Parceiro” e envie a mensagem pré-preenchida.</p></details>
+        <details><summary>Quanto o cliente indicado recebe de desconto?</summary><p>O cliente indicado recebe 5% de desconto, desde que a indicação seja identificada através do código do parceiro.</p></details>
+        <details><summary>Quanto posso ganhar de comissão?</summary><p>A comissão varia por nível: 5% no Nível 1, 10% no Nível 2 e 15% no Nível 3, conforme o volume mensal aplicável.</p></details>
+        <details><summary>Quando o meu nível muda?</summary><p>O nível é recalculado mensalmente com base no volume atingido no mês anterior.</p></details>
+        <details><summary>A comissão é calculada sobre o preço antes do desconto?</summary><p>Não. A comissão é calculada após o desconto do cliente e incide sobre o valor comissionável da venda.</p></details>
+        <details><summary>Quando recebo?</summary><p>Os pagamentos são feitos no dia 15 e no último dia do mês. O mínimo para pagamento é 3.000 Kz; abaixo desse valor, o saldo acumula.</p></details>
+        <details><summary>O que significa estado Suspenso?</summary><p>O programa utiliza os estados Ativo e Suspenso para gerir a situação do cadastro de cada parceiro.</p></details>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <div><div class="eyebrow">Cyber Parceiros</div><h2>Comece pela sua rede.</h2><p>Candidate-se como parceiro/agente de vendas do Cyber Agrafos e transforme boas indicações em comissão.</p></div>
+          <a class="btn btn-red" href="https://wa.me/244925430609?text=Ol%C3%A1%2C%20quero%20candidatar-me%20ao%20Cyber%20Parceiros%20como%20parceiro%2Fagente%20de%20vendas." target="_blank" rel="noopener">Candidatar-me pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><strong style="color:#222">Cyber Agrafos · Cyber Parceiros</strong><div class="legal">Programa de parceiros e agentes de vendas.</div></div>
+        <div class="contacts" aria-label="Contactos oficiais">
+          <a href="https://wa.me/244925430609" target="_blank" rel="noopener">WhatsApp: 925 430 609</a>
+          <a href="tel:+244952635551">Telefone: 952 635 551</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
