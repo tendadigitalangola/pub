@@ -32,3 +32,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify Cyber Parceiros public page
+        shell: bash
+        run: |
+          url="${{ steps.deployment.outputs.page_url }}cyber-parceiros/"
+          for attempt in {1..12}; do
+            if body="$(curl --fail --silent --show-error --location --max-time 20 "$url")"; then
+              if grep -q "PROCURANDO" <<<"$body" \
+                && grep -q "Cyber Parceiros" <<<"$body" \
+                && grep -q "925 430 609" <<<"$body"; then
+                echo "Public page verified: $url"
+                exit 0
+              fi
+            fi
+            sleep 5
+          done
+          echo "Public page verification failed: $url" >&2
+          exit 1
