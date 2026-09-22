@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Poligest 3.15 — Uma nova fase da gestão escolar</title>
+  <meta name="description" content="Conheça a evolução do Poligest: Portal do Estudante, notificações por SMS, campanhas e relatório executivo diário para a direcção.">
+  <meta name="theme-color" content="#062d4f">
+  <meta property="og:title" content="Poligest 3.15 — Uma nova fase da gestão escolar">
+  <meta property="og:description" content="Portal do Estudante, SMS e informação executiva para aproximar estudantes, famílias e direcção.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/cards.webp">
+  <style>
+    :root{--navy:#052743;--navy2:#083b64;--teal:#11d6a5;--teal2:#34efc0;--white:#fff;--muted:#bdd2e4;--card:#0b3659;--line:rgba(255,255,255,.12);--shadow:0 28px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 78% 6%,#0b5a8f 0,transparent 30%),linear-gradient(180deg,#041e35 0%,#062d4f 44%,#031827 100%);color:var(--white);line-height:1.55}
+    a{color:inherit}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.05em}.brandmark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#2fbaf1,#16e39e);display:grid;place-items:center;color:#04223a;font-weight:950}.navlinks{display:flex;gap:18px;align-items:center;font-size:14px;color:#dceaf4}.navlinks a{text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 22px;text-decoration:none;font-weight:800;border:1px solid transparent;transition:.2s}.btn-primary{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#032a35;box-shadow:0 14px 34px rgba(17,214,165,.25)}.btn-secondary{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.06)}.btn:hover{transform:translateY(-1px)}
+    .hero{padding:74px 0 54px;display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center}.eyebrow{color:var(--teal2);font-weight:900;letter-spacing:.18em;font-size:13px}.hero h1{font-size:clamp(44px,6vw,78px);line-height:.98;margin:14px 0 20px;letter-spacing:-.045em}.hero h1 span{display:block;color:#c9d8e5;font-weight:430;font-size:.66em;line-height:1.12;margin-top:14px}.lead{font-size:20px;color:#d2e1ec;max-width:660px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-proof{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;color:#b9cfde;font-size:14px}.hero-proof strong{display:block;color:#fff;font-size:16px}.hero-art{position:relative}.hero-art .sprite-card{width:100%;border-radius:28px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}
+    .section{padding:72px 0}.section-head{max-width:760px;margin-bottom:34px}.section h2{font-size:clamp(34px,4vw,54px);line-height:1.08;margin:8px 0 14px;letter-spacing:-.03em}.section p{color:#c2d6e4}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.045));border:1px solid var(--line);border-radius:24px;padding:26px;min-height:220px}.ico{width:52px;height:52px;border-radius:16px;background:rgba(17,214,165,.13);display:grid;place-items:center;color:var(--teal2);font-size:25px;margin-bottom:18px}.feature h3{font-size:22px;margin:0 0 10px}.feature p{margin:0}.badge{display:inline-block;padding:7px 12px;border-radius:999px;background:rgba(17,214,165,.12);color:var(--teal2);font-size:12px;font-weight:850;letter-spacing:.06em}
+    .carousel-shell{position:relative}.carousel{display:flex;overflow:auto;scroll-snap-type:x mandatory;gap:20px;padding:6px 2px 22px;scrollbar-width:none}.carousel::-webkit-scrollbar{display:none}.slide{flex:0 0 min(76vw,500px);scroll-snap-align:center}.slide .sprite-card{width:100%;border-radius:24px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}.sprite-card{aspect-ratio:4/5;background-image:url(assets/cards.webp);background-size:300% 200%;background-repeat:no-repeat;background-color:#062d4f}.c1{background-position:0 0}.c2{background-position:50% 0}.c3{background-position:100% 0}.c4{background-position:0 100%}.c5{background-position:50% 100%}.c6{background-position:100% 100%}.carousel-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px}.dots{display:flex;gap:8px;flex-wrap:wrap}.dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25)}.dot.active{background:var(--teal2);transform:scale(1.25)}.arrow{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:20px;cursor:pointer}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:28px;padding:32px}.panel h3{font-size:28px;margin:0 0 12px}.list{display:grid;gap:14px;margin-top:22px}.li{display:flex;gap:14px;align-items:flex-start}.check{width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:rgba(17,214,165,.15);color:var(--teal2);display:grid;place-items:center;font-weight:900}.cta{background:linear-gradient(135deg,#0b5486,#053153 60%,#073e62);border:1px solid rgba(255,255,255,.12);border-radius:32px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{margin:0 0 10px}.cta p{margin:0;max-width:700px}.cta-actions{display:flex;flex-direction:column;gap:10px;min-width:250px}.fine{font-size:13px;color:#99b7ca}.footer{padding:34px 0 48px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#9eb7c8;font-size:14px}.footer a{text-decoration:none}.hide-desktop{display:none}
+    @media(max-width:900px){.navlinks a:not(.btn){display:none}.hero{grid-template-columns:1fr;padding-top:42px}.hero-art{max-width:620px}.grid3,.split{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}.cta-actions{width:100%;min-width:0}.slide{flex-basis:84vw}.section{padding:56px 0}.footer{flex-direction:column}.hide-desktop{display:inline}}
+    @media(max-width:520px){.wrap{width:min(100% - 24px,1180px)}.nav{padding:14px 0}.brandmark{width:36px;height:36px}.hero{gap:28px;padding:28px 0 38px}.hero h1{font-size:43px}.lead{font-size:17px}.btn{width:100%}.hero-actions{display:grid}.hero-proof{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature{min-height:0}.panel,.cta{padding:24px}.slide{flex-basis:92vw}.section h2{font-size:35px}.carousel-actions{align-items:flex-end}}
+  </style>
+</head>
+<body>
+<header class="wrap nav">
+  <div class="brand"><div class="brandmark">pg</div><div>POLIGEST</div></div>
+  <nav class="navlinks" aria-label="Navegação principal"><a href="#novidades">Novidades</a><a href="#recursos">Recursos</a><a href="#activar">Activar</a><a class="btn btn-primary" href="https://wa.me/244944819923?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Poligest%203.15" target="_blank" rel="noopener">Falar com a equipa</a></nav>
+</header>
+<main>
+  <section class="wrap hero">
+    <div>
+      <div class="eyebrow">NOVIDADES POLIGEST</div>
+      <h1>POLIGEST 3.15 <span>Uma nova fase da gestão escolar.</span></h1>
+      <p class="lead">O Poligest evoluiu para aproximar estudantes, famílias, operadores e direcção — com acesso próprio do estudante, comunicação por SMS e informação executiva automática.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#novidades">Ver o que mudou</a><a class="btn btn-secondary" href="#activar">Solicitar activação</a></div>
+      <div class="hero-proof"><div><strong>Portal do Estudante</strong>Notas, faltas e situação financeira</div><div><strong>Comunicações SMS</strong>Ligadas às operações reais</div><div><strong>Relatório executivo</strong>Resumo diário para a direcção</div></div>
+    </div>
+    <div class="hero-art"><div class="sprite-card c1" role="img" aria-label="Poligest 3.15 — Portal do Estudante, SMS e relatório executivo"></div></div>
+  </section>
+
+  <section id="recursos" class="section wrap">
+    <div class="section-head"><span class="badge">VALOR VISÍVEL</span><h2>Da operação diária à informação que chega a quem precisa.</h2><p>As novidades estão integradas no fluxo real da instituição: o estudante consulta, o operador comunica e a direcção acompanha.</p></div>
+    <div class="grid3">
+      <article class="feature"><div class="ico">🎓</div><h3>Portal do Estudante</h3><p>Acesso próprio para consultar notas publicadas, faltas e situação financeira, com alteração obrigatória da senha inicial.</p></article>
+      <article class="feature"><div class="ico">💬</div><h3>Notificações por SMS</h3><p>Depois de operações como matrícula, publicação de notas ou emissão de documentos, o operador pode notificar os envolvidos em poucos passos.</p></article>
+      <article class="feature"><div class="ico">📊</div><h3>Relatório executivo diário</h3><p>Matrículas, confirmações, pagamentos e arrecadação resumidos por SMS para destinatários configuráveis da direcção.</p></article>
+    </div>
+  </section>
+
+  <section id="novidades" class="section wrap">
+    <div class="section-head"><span class="badge">CARROSSEL DE LANÇAMENTO</span><h2>Veja a nova fase do Poligest.</h2><p>Seis peças apresentam os recursos com base em telas e fluxos reais do produto.</p></div>
+    <div class="carousel-shell">
+      <div class="carousel" id="carousel" aria-label="Carrossel Poligest 3.15">
+        <div class="slide"><div class="sprite-card c1" role="img" aria-label="Card 1 — Poligest 3.15"></div></div>
+        <div class="slide"><div class="sprite-card c2" role="img" aria-label="Card 2 — Portal do Estudante"></div></div>
+        <div class="slide"><div class="sprite-card c3" role="img" aria-label="Card 3 — Notificações por SMS"></div></div>
+        <div class="slide"><div class="sprite-card c4" role="img" aria-label="Card 4 — Relatório executivo diário"></div></div>
+        <div class="slide"><div class="sprite-card c5" role="img" aria-label="Card 5 — Campanhas e automações"></div></div>
+        <div class="slide"><div class="sprite-card c6" role="img" aria-label="Card 6 — Activação e demonstração"></div></div>
+      </div>
+      <div class="carousel-actions"><div class="dots" id="dots" aria-hidden="true"></div><div><button class="arrow" id="prev" aria-label="Anterior">←</button> <button class="arrow" id="next" aria-label="Seguinte">→</button></div></div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <article class="panel"><span class="badge">PARA CLIENTES ACTUAIS</span><h3>Active e configure os novos recursos.</h3><p>O foco é aproveitar mais valor da instalação que a instituição já utiliza.</p><div class="list"><div class="li"><div class="check">✓</div><div><strong>Portal do Estudante</strong><br><span class="fine">Preparar acessos e orientar os estudantes.</span></div></div><div class="li"><div class="check">✓</div><div><strong>Comunicações</strong><br><span class="fine">Validar créditos, destinatários e fluxos de SMS.</span></div></div><div class="li"><div class="check">✓</div><div><strong>Automações</strong><br><span class="fine">Configurar relatório executivo e destinatários.</span></div></div></div></article>
+      <article class="panel"><span class="badge">PARA NOVAS INSTITUIÇÕES</span><h3>Veja o Poligest a funcionar.</h3><p>Uma demonstração permite conhecer o ciclo académico, financeiro e de comunicação numa única plataforma.</p><div class="list"><div class="li"><div class="check">✓</div><div><strong>Gestão académica</strong><br><span class="fine">Matrículas, turmas, notas, pautas e faltas.</span></div></div><div class="li"><div class="check">✓</div><div><strong>Tesouraria e POS</strong><br><span class="fine">Cobranças, conta corrente, documentos e relatórios.</span></div></div><div class="li"><div class="check">✓</div><div><strong>Comunicação e visão</strong><br><span class="fine">SMS, campanhas e informação executiva.</span></div></div></div></article>
+    </div>
+  </section>
+
+  <section id="activar" class="section wrap">
+    <div class="cta"><div><span class="badge">PRONTO PARA AVANÇAR</span><h2>A escola acontece. O Poligest acompanha.</h2><p>Já utiliza o Poligest? Solicite a activação/configuração dos recursos. Ainda não utiliza? Peça uma demonstração.</p></div><div class="cta-actions"><a class="btn btn-primary" href="https://wa.me/244944819923?text=Ol%C3%A1%2C%20j%C3%A1%20sou%20cliente%20e%20quero%20activar%2Fconfigurar%20as%20novidades%20do%20Poligest%203.15" target="_blank" rel="noopener">Sou cliente — activar</a><a class="btn btn-secondary" href="https://wa.me/244944819923?text=Ol%C3%A1%2C%20quero%20uma%20demonstra%C3%A7%C3%A3o%20do%20Poligest" target="_blank" rel="noopener">Quero uma demonstração</a><a class="fine" href="mailto:geral@poligest.ao">geral@poligest.ao · +244 944 819 923</a></div></div>
+  </section>
+</main>
+<footer class="wrap footer"><div>© 2016–2026 Poligest · Um produto Tenda Digital, Lda.</div><div><a href="https://poligest.ao">poligest.ao</a> · <a href="mailto:geral@poligest.ao">geral@poligest.ao</a></div></footer>
+<script>
+  const c=document.getElementById('carousel'), slides=[...c.children], dots=document.getElementById('dots');
+  slides.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===0?' active':'');dots.appendChild(d)});
+  const ds=[...dots.children]; let current=0;
+  function go(i){current=(i+slides.length)%slides.length;slides[current].scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});ds.forEach((d,j)=>d.classList.toggle('active',j===current));}
+  document.getElementById('prev').onclick=()=>go(current-1); document.getElementById('next').onclick=()=>go(current+1);
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){current=slides.indexOf(e.target);ds.forEach((d,j)=>d.classList.toggle('active',j===current));}}),{root:c,threshold:.62});slides.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
