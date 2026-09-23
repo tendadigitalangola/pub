@@ -49,7 +49,7 @@ jobs:
           done
           echo "Public page verification failed: $url" >&2
           exit 1
-      - name: Verify Poligest 3.15 public page and assets
+      - name: Verify Poligest 3.15 public page
         shell: bash
         run: |
           base="${{ steps.deployment.outputs.page_url }}poligest-3-15/"
@@ -58,15 +58,16 @@ jobs:
               && grep -q "POLIGEST 3.15" <<<"$body" \
               && grep -q "Portal do Estudante" <<<"$body" \
               && grep -q "Relatório executivo diário" <<<"$body" \
+              && grep -q 'class="scene"' <<<"$body" \
+              && grep -q 'class="card"' <<<"$body" \
+              && ! grep -q "cards.webp" <<<"$body" \
               && grep -q "assets/poligest-logo.png?v=2" <<<"$body" \
               && grep -q "assets/favicon.png?v=2" <<<"$body" \
-              && curl --fail --silent --show-error --location --max-time 20 "${base}assets/cards.webp?v=2" -o /tmp/poligest-cards.webp \
               && curl --fail --silent --show-error --location --max-time 20 "${base}assets/poligest-logo.png?v=2" -o /tmp/poligest-logo.png \
               && curl --fail --silent --show-error --location --max-time 20 "${base}assets/favicon.png?v=2" -o /tmp/poligest-favicon.png \
-              && test "$(wc -c < /tmp/poligest-cards.webp)" -gt 5000 \
               && test "$(wc -c < /tmp/poligest-logo.png)" -gt 1000 \
               && test "$(wc -c < /tmp/poligest-favicon.png)" -gt 1000; then
-                echo "Poligest 3.15 page and visual assets verified: $base"
+                echo "Poligest 3.15 native-render page verified: $base"
                 exit 0
             fi
             sleep 5
