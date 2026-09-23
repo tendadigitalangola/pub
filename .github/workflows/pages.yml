@@ -60,6 +60,9 @@ jobs:
               && grep -q "Relatório executivo diário" <<<"$body" \
               && grep -q 'class="scene"' <<<"$body" \
               && grep -q 'class="card"' <<<"$body" \
+              && grep -q 'id="launchCarousel"' <<<"$body" \
+              && grep -q 'id="launchNext"' <<<"$body" \
+              && grep -q 'setInterval' <<<"$body" \
               && ! grep -q "cards.webp" <<<"$body" \
               && grep -q "assets/poligest-logo.png?v=2" <<<"$body" \
               && grep -q "assets/favicon.png?v=2" <<<"$body" \
@@ -67,7 +70,7 @@ jobs:
               && curl --fail --silent --show-error --location --max-time 20 "${base}assets/favicon.png?v=2" -o /tmp/poligest-favicon.png \
               && test "$(wc -c < /tmp/poligest-logo.png)" -gt 1000 \
               && test "$(wc -c < /tmp/poligest-favicon.png)" -gt 1000; then
-                echo "Poligest 3.15 native-render page verified: $base"
+                echo "Poligest 3.15 native-render carousel verified: $base"
                 exit 0
             fi
             sleep 5
