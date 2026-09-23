@@ -1,0 +1,1 @@
+Assets visuais da landing Poligest 3.15. Atualização v2: cards do carrossel, logotipo Poligest e favicon. O workflow de Pages valida a disponibilidade destes ficheiros após cada deploy.
