@@ -49,31 +49,22 @@ jobs:
           done
           echo "Public page verification failed: $url" >&2
           exit 1
-      - name: Verify Poligest 3.15 public page
+      - name: Verify Poligest links point to official 3.16 landing
         shell: bash
         run: |
-          base="${{ steps.deployment.outputs.page_url }}poligest-3-15/"
+          official="https://www.poligest.ao/novidades/poligest-3-16/"
+          base="${{ steps.deployment.outputs.page_url }}"
           for attempt in {1..12}; do
-            if body="$(curl --fail --silent --show-error --location --max-time 20 "$base")" \
-              && grep -q "POLIGEST 3.15" <<<"$body" \
-              && grep -q "Portal do Estudante" <<<"$body" \
-              && grep -q "Relatório executivo diário" <<<"$body" \
-              && grep -q 'class="scene"' <<<"$body" \
-              && grep -q 'class="card"' <<<"$body" \
-              && grep -q 'id="launchCarousel"' <<<"$body" \
-              && grep -q 'id="launchNext"' <<<"$body" \
-              && grep -q 'setInterval' <<<"$body" \
-              && ! grep -q "cards.webp" <<<"$body" \
-              && grep -q "assets/poligest-logo.png?v=2" <<<"$body" \
-              && grep -q "assets/favicon.png?v=2" <<<"$body" \
-              && curl --fail --silent --show-error --location --max-time 20 "${base}assets/poligest-logo.png?v=2" -o /tmp/poligest-logo.png \
-              && curl --fail --silent --show-error --location --max-time 20 "${base}assets/favicon.png?v=2" -o /tmp/poligest-favicon.png \
-              && test "$(wc -c < /tmp/poligest-logo.png)" -gt 1000 \
-              && test "$(wc -c < /tmp/poligest-favicon.png)" -gt 1000; then
-                echo "Poligest 3.15 native-render carousel verified: $base"
-                exit 0
+            old="$(curl --fail --silent --show-error --max-time 20 "${base}poligest-3-15/" || true)"
+            current="$(curl --fail --silent --show-error --max-time 20 "${base}poligest-3-16/" || true)"
+            if grep -q "$official" <<<"$old" \
+              && grep -q "$official" <<<"$current" \
+              && grep -q 'rel="canonical"' <<<"$old" \
+              && grep -q 'rel="canonical"' <<<"$current"; then
+              echo "Poligest GitHub Pages aliases point to official 3.16 landing."
+              exit 0
             fi
             sleep 5
           done
-          echo "Poligest 3.15 verification failed: $base" >&2
+          echo "Poligest redirect verification failed." >&2
           exit 1
